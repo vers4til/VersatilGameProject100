@@ -22,16 +22,41 @@ public:
     m_EscapeProbability(EscapeProbability),
     m_WeaknessCoefficient(WeaknessCoefficient){}
 
-     void SetHealth(uint32_t TakenDamage);
-     void SetFuel(uint32_t FuelChange);
-     void SetBalance(uint32_t BalanceChange);
-    [[nodiscard]] uint32_t GetHealth() const;
-    [[nodiscard]] uint32_t GetFuel() const;
-    [[nodiscard]] uint32_t GetBalance() const;
-    [[nodiscard]] uint32_t GetEscapeProbability() const;
-    [[nodiscard]] float GetWeaknessCo() const;
     virtual void DisplayName() = 0;
     virtual ~Ships() = default;
+
+    inline void SetHealth(const uint32_t TakenDamage) {
+        m_CurrentHealthLevel -= TakenDamage;
+    }
+
+    inline void SetFuel(const uint32_t FuelChange) {
+        m_CurrentFuelLevel -= FuelChange;
+    }
+
+    inline void SetBalance(const uint32_t BalanceChange) {
+//    balance can increase or decrease, so we put +. if it will decrease we will send parameter negative.
+        m_CurrentBalance += BalanceChange;
+    }
+
+    [[nodiscard]] inline uint32_t GetHealth() const {
+        return m_CurrentHealthLevel;
+    }
+
+    [[nodiscard]] inline uint32_t GetFuel() const {
+        return m_CurrentFuelLevel;
+    }
+
+    [[nodiscard]] inline uint32_t GetBalance() const {
+        return m_CurrentBalance;
+    }
+
+    [[nodiscard]] inline uint32_t GetEscapeProbability() const {
+        return m_EscapeProbability;
+    }
+
+    [[nodiscard]] inline float GetWeaknessCo() const {
+        return m_WeaknessCoefficient;
+    }
 };
 
 #endif //VERSATILGAMEPROJECT_SHIPS_H
