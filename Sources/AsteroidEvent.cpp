@@ -31,8 +31,8 @@ void AsteroidEvent::CalculateEscapeChance(const std::shared_ptr<Ships> &Ship) {
     } else {
         uint32_t AlinacakHasar = DamageCalculator(Ship->GetWeaknessCo());
         if(Ship->GetHealth() > AlinacakHasar) {
-            Ship->SetHealth(DamageCalculator(Ship->GetWeaknessCo()));
-            std::cout << AsteroidEvent::DamageCalculator(Ship->GetWeaknessCo()) << " hasar aldiniz!\n";
+            Ship->SetHealth(AlinacakHasar);
+            std::cout << AlinacakHasar << " hasar aldiniz!\n";
         } else
             Ship->SetHealth(Ship->GetHealth());
         Susleme();

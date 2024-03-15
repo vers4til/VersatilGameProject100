@@ -50,7 +50,7 @@ void PiratesEvent::ChoiceResults(const std::shared_ptr<Ships> &Ship) {
 
                 if (KacmaOlasiligi < Ship->GetEscapeProbability()) {
                     Ship->SetFuel(GerekliYakit);
-                    std::cout << "Kacmayi basardiniz, 33 yakit azaldi.\n";
+                    std::cout << "Kacmayi basardiniz, "<< GerekliYakit <<" yakit azaldi.\n";
                     Susleme();
                     WaitBetweenCodes(2);
                     break;

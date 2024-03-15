@@ -10,7 +10,6 @@
 #include <random>
 #include <utility>
 
-
 constexpr int EVENTNUMBER{3}; // for 3 different events
 constexpr int EVENTCOUNTER{5}; //events will be called 5 times
 
@@ -109,8 +108,7 @@ void PuanHesabi(const uint32_t CurrentHealthLevel, const uint32_t CurrentBalance
     uint32_t YakitKatsayisi{5};
     uint32_t ParaKatsayisi{10};
 
-    TotalPuan =
-            CurrentHealthLevel * SaglikKatsayisi + CurrentBalance * ParaKatsayisi + CurrentFuelLevel * YakitKatsayisi;
+    TotalPuan = CurrentHealthLevel * SaglikKatsayisi + CurrentBalance * ParaKatsayisi + CurrentFuelLevel * YakitKatsayisi;
 
     Susleme();
     std::cout << "\n Oyun bitti, oyun sonu puaniniz: \n" << "               " << TotalPuan << "\n";
