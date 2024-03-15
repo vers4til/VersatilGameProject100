@@ -4,18 +4,18 @@
 
 void AbandonedEvent::EventStarter(std::shared_ptr<Ships> Ship) {
     Susleme();
-    std::cout << "\nTerk edilmis Gezegen Eventi basladi!\n";
+    std::cout << "\nTerk edilmiş Gezegen Eventi başladı!\n";
     WaitBetweenCodes(3);
     OddOfPirates(Ship);
 }
 
 void AbandonedEvent::OddOfPirates(const std::shared_ptr<Ships> &Ship) const {
     uint32_t chance = Odd(0, 1);
-    std::cout << "Uzay Korsanlariyla karsilasma ihtimali hesaplaniyor...\n";
+    std::cout << "Uzay Korsanlarıyla karşılaşma ihtimali hesaplanıyor...\n";
     WaitBetweenCodes(3);
     if (chance == 0) {
         Ship->SetBalance(BalanceChange);
-        std::cout << BalanceChange << " altin kazandiniz!\n";
+        std::cout << BalanceChange << " altın kazandınız!\n";
         WaitBetweenCodes(2);
         Susleme();
     } else if (chance == 1) {

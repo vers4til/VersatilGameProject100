@@ -25,11 +25,11 @@ void EventCount(const std::shared_ptr<Ships> &SecilenGemi) {
     int i{0};
     for (; i < EVENTCOUNTER; ++i) {
         RandomEventGenerate(SecilenGemi);
-        std::cout << "\nEvent sonu guncel saglik seviyeniz: " << SecilenGemi->GetHealth() << "\n";
+        std::cout << "\nEvent sonu güncel saglık seviyeniz: " << SecilenGemi->GetHealth() << "\n";
         WaitBetweenCodes(1);
-        std::cout << "Event sonu guncel para miktariniz: " << SecilenGemi->GetBalance() << "\n";
+        std::cout << "Event sonu güncel para miktarınız: " << SecilenGemi->GetBalance() << "\n";
         WaitBetweenCodes(1);
-        std::cout << "Event sonu guncel yakit seviyeniz: " << SecilenGemi->GetFuel() << "\n";
+        std::cout << "Event sonu güncel yakıt seviyeniz: " << SecilenGemi->GetFuel() << "\n";
         WaitBetweenCodes(5);
         if (SecilenGemi->GetFuel() == 0 || SecilenGemi->GetHealth() == 0)
             break;
@@ -65,7 +65,7 @@ std::unique_ptr<Ships> GemiSecimi() {
         WaitBetweenCodes(1);
         std::cout << "3. Güçlü Gemi\n";
         WaitBetweenCodes(1);
-        std::cout << "Seciminiz: ";
+        std::cout << "Seçiminiz: ";
 
         std::cin >> GemiSecimi;
 
@@ -94,11 +94,11 @@ std::unique_ptr<Ships> GemiSecimi() {
     } while (check == 0);
     GemiAtamasi->DisplayName();
     Susleme();
-    std::cout << "\nOyun baslangici saglik seviyeniz: " << GemiAtamasi->GetHealth() << "\n";
+    std::cout << "\nOyun baslangıcı saglık seviyeniz: " << GemiAtamasi->GetHealth() << "\n";
     WaitBetweenCodes(1);
-    std::cout << "Oyun baslangici para miktariniz: " << GemiAtamasi->GetBalance() << "\n";
+    std::cout << "Oyun baslangıcı para miktarınız: " << GemiAtamasi->GetBalance() << "\n";
     WaitBetweenCodes(1);
-    std::cout << "Oyun baslangici yakit seviyeniz: " << GemiAtamasi->GetFuel() << "\n";
+    std::cout << "Oyun baslangıcı yakıt seviyeniz: " << GemiAtamasi->GetFuel() << "\n";
     WaitBetweenCodes(5);
     return GemiAtamasi;
 }
@@ -113,6 +113,6 @@ void PuanHesabi(const uint32_t CurrentHealthLevel, const uint32_t CurrentBalance
             CurrentHealthLevel * SaglikKatsayisi + CurrentBalance * ParaKatsayisi + CurrentFuelLevel * YakitKatsayisi;
 
     Susleme();
-    std::cout << "\n Oyun bitti, oyun sonu puaniniz: \n" << "               " << TotalPuan << "\n";
+    std::cout << "\n Oyun bitti, oyun sonu puanınız: \n" << "               " << TotalPuan << "\n";
     Susleme();
 }

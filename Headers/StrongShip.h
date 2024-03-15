@@ -12,7 +12,7 @@ public:
             : Ships(CurrentHealthLevel, CurrentBalance, CurrentFuelLevel, EscapeProbability, WeaknessCoefficient) {}
 
     inline void DisplayName() override {
-        std::cout << "Guclu Gemiyi Sectiniz!\n";
+        std::cout << "Güçlü gemiyi seçtiniz!\n";
     }
 };
 

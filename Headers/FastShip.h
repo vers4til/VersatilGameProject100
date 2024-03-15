@@ -8,7 +8,7 @@ public:
     FastShip(uint32_t CurrentHealthLevel, uint32_t CurrentBalance, uint32_t CurrentFuelLevel, uint32_t EscapeProbability, float WeaknessCoefficient)
     : Ships(CurrentHealthLevel, CurrentBalance, CurrentFuelLevel, EscapeProbability, WeaknessCoefficient){}
     inline void DisplayName() override{
-        std::cout << "Hizli Gemiyi Sectiniz!\n";
+        std::cout << "Hızlı gemiyi seçtiniz!\n";
     }
 };
 

@@ -6,7 +6,7 @@ constexpr int EVENTCYCLE{3};
 
 void AsteroidEvent::EventStarter(std::shared_ptr<Ships> Ship) {
     Susleme();
-    std::cout << "\nAsteroid Eventi basladi!\n";
+    std::cout << "\nAsteroid Eventi başladı!\n";
     DisplayEventType();
     WaitBetweenCodes(3);
     int i{0};
@@ -23,16 +23,16 @@ void AsteroidEvent::CalculateEscapeChance(const std::shared_ptr<Ships> &Ship) {
     uint32_t chance = Odd(1, 100);
     WaitBetweenCodes(3);
     Susleme();
-    std::cout << "\nHasar alma olasiligi hesaplaniyor...\n";
+    std::cout << "\nHasar alma olasılığı hesaplanıyor...\n";
     WaitBetweenCodes(3);
     if (chance <= Ship->GetEscapeProbability()) {
-        std::cout << "Hasar almadiniz!\n";
+        std::cout << "Hasar almadınız!\n";
         Susleme();
     } else {
         uint32_t AlinacakHasar = DamageCalculator(Ship->GetWeaknessCo());
         if(Ship->GetHealth() > AlinacakHasar) {
             Ship->SetHealth(DamageCalculator(Ship->GetWeaknessCo()));
-            std::cout << AsteroidEvent::DamageCalculator(Ship->GetWeaknessCo()) << " hasar aldiniz!\n";
+            std::cout << AsteroidEvent::DamageCalculator(Ship->GetWeaknessCo()) << " hasar aldınız!\n";
         } else
             Ship->SetHealth(Ship->GetHealth());
         Susleme();

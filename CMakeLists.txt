@@ -21,7 +21,6 @@ set(HEADERS
 set(SOURCES
         Sources/GeneralFunctions.cpp
         Sources/Events.cpp
-        Sources/Ships.cpp
         Sources/AbandonedEvent.cpp
         Sources/AsteroidEvent.cpp
         Sources/PiratesEvent.cpp
