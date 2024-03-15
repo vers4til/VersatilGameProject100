@@ -11,7 +11,7 @@ public:
                uint32_t EscapeProbability, float WeaknessCoefficient)
             : Ships(CurrentHealthLevel, CurrentBalance, CurrentFuelLevel, EscapeProbability, WeaknessCoefficient) {}
 
-    void DisplayName() override {
+    inline void DisplayName() override {
         std::cout << "Guclu Gemiyi Sectiniz!\n";
     }
 };

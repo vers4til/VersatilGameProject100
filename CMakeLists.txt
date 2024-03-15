@@ -4,6 +4,9 @@ project(VersatilGameProject)
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(Headers)
+
+
+
 add_executable(VersatilGameProject main.cpp
         Headers/Ships.h
         Headers/FastShip.h

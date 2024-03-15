@@ -66,8 +66,9 @@ void PiratesEvent::ChoiceResults(const std::shared_ptr<Ships> &Ship) {
             WaitBetweenCodes(3);
             if (Odd(0, 1)) {
                 std::cout << "Savasi kaybettiniz! \n";
-                Ship->SetHealth(DamageCalculator(Ship->GetWeaknessCo()));
-                std::cout << DamageCalculator(Ship->GetWeaknessCo()) << " hasar aldiniz.\n";
+                float AlinanHasar = DamageCalculator(Ship->GetWeaknessCo());
+                Ship->SetHealth(AlinanHasar);
+                std::cout << AlinanHasar << " hasar aldiniz.\n";
                 Susleme();
                 break;
             } else {
@@ -93,14 +94,15 @@ void PiratesEvent::ChoiceResults(const std::shared_ptr<Ships> &Ship) {
                 GecisUcreti = GecisUcreti_3;
             if (GecisUcreti < Ship->GetBalance()) {
                 Ship->SetBalance(GecisUcreti);
-                GecisUcreti *= -1;
-                std::cout << "Korsanlar gecis ucreti olarak sizden " << GecisUcreti << " altin aldi.\n";
+                std::cout << "Korsanlar gecis ucreti olarak sizden " << (GecisUcreti * (-1)) << " altin aldi.\n";
                 Susleme();
                 WaitBetweenCodes(2);
                 break;
             } else {
                 std::cout << "Korsanlara verecek paraniz yok, kacmayi veya savasmayi secmelisiniz.\n";
             }
+        } else {
+            std::cout << "Lutfen gecerli bir secim yapin.\n";
         }
     }
 }
