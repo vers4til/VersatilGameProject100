@@ -25,11 +25,11 @@ void EventCount(const std::shared_ptr<Ships> &SecilenGemi) {
     int i{0};
     for (; i < EVENTCOUNTER; ++i) {
         RandomEventGenerate(SecilenGemi);
-        std::cout << "\nEvent sonu güncel saglık seviyeniz: " << SecilenGemi->GetHealth() << "\n";
+        std::cout << "\nEvent sonu gunccel saglik seviyeniz: " << SecilenGemi->GetHealth() << "\n";
         WaitBetweenCodes(1);
-        std::cout << "Event sonu güncel para miktarınız: " << SecilenGemi->GetBalance() << "\n";
+        std::cout << "Event sonu guncel para miktariniz: " << SecilenGemi->GetBalance() << "\n";
         WaitBetweenCodes(1);
-        std::cout << "Event sonu güncel yakıt seviyeniz: " << SecilenGemi->GetFuel() << "\n";
+        std::cout << "Event sonu guncel yakit seviyeniz: " << SecilenGemi->GetFuel() << "\n";
         WaitBetweenCodes(5);
         if (SecilenGemi->GetFuel() == 0 || SecilenGemi->GetHealth() == 0)
             break;
@@ -55,17 +55,17 @@ std::unique_ptr<Ships> GemiSecimi() {
     std::cout << "\n  VERSATIL GAMES INC. GURURLA SUNAR \n";
     Susleme();
     WaitBetweenCodes(3);
-    std::cout << "\nOyuna başlamak için geminizi seçin: \n";
+    std::cout << "\nOyuna baslamak icin geminizi secin: \n";
     WaitBetweenCodes(1);
     std::unique_ptr<Ships> GemiAtamasi;
     do {
         std::cout << "1. Normal Gemi\n";
         WaitBetweenCodes(1);
-        std::cout << "2. Hızlı Gemi\n";
+        std::cout << "2. Hizli Gemi\n";
         WaitBetweenCodes(1);
-        std::cout << "3. Güçlü Gemi\n";
+        std::cout << "3. Guclu Gemi\n";
         WaitBetweenCodes(1);
-        std::cout << "Seçiminiz: ";
+        std::cout << "Seciminiz: ";
 
         std::cin >> GemiSecimi;
 
@@ -87,18 +87,18 @@ std::unique_ptr<Ships> GemiSecimi() {
                 break;
 
             default:
-                std::cout << "\nLütfen geçerli bir seçim yapın. \n";
+                std::cout << "\nLutfen gecerli bir secim yapin. \n";
                 WaitBetweenCodes(2);
                 check = 0;
         }
     } while (check == 0);
     GemiAtamasi->DisplayName();
     Susleme();
-    std::cout << "\nOyun baslangıcı saglık seviyeniz: " << GemiAtamasi->GetHealth() << "\n";
+    std::cout << "\nOyun baslangici saglik seviyeniz: " << GemiAtamasi->GetHealth() << "\n";
     WaitBetweenCodes(1);
-    std::cout << "Oyun baslangıcı para miktarınız: " << GemiAtamasi->GetBalance() << "\n";
+    std::cout << "Oyun baslangici para miktariniz: " << GemiAtamasi->GetBalance() << "\n";
     WaitBetweenCodes(1);
-    std::cout << "Oyun baslangıcı yakıt seviyeniz: " << GemiAtamasi->GetFuel() << "\n";
+    std::cout << "Oyun baslangici yakit seviyeniz: " << GemiAtamasi->GetFuel() << "\n";
     WaitBetweenCodes(5);
     return GemiAtamasi;
 }
@@ -113,6 +113,6 @@ void PuanHesabi(const uint32_t CurrentHealthLevel, const uint32_t CurrentBalance
             CurrentHealthLevel * SaglikKatsayisi + CurrentBalance * ParaKatsayisi + CurrentFuelLevel * YakitKatsayisi;
 
     Susleme();
-    std::cout << "\n Oyun bitti, oyun sonu puanınız: \n" << "               " << TotalPuan << "\n";
+    std::cout << "\n Oyun bitti, oyun sonu puaniniz: \n" << "               " << TotalPuan << "\n";
     Susleme();
 }

@@ -4,6 +4,7 @@
 #include "Ships.h"
 #include <thread>
 #include <chrono>
+#include <memory>
 
 inline void WaitBetweenCodes(uint32_t second){
     std::this_thread::sleep_for(std::chrono::seconds(second));
