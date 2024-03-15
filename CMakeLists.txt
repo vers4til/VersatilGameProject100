@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.10)
 project(VersatilGameProject)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -25,7 +25,6 @@ set(SOURCES
         Sources/AsteroidEvent.cpp
         Sources/PiratesEvent.cpp
         Sources/DamagingEvents.cpp
-        main.cpp
 )
 
-add_executable(VersatilGameProject ${SOURCES} ${HEADERS})
+add_executable(VersatilGameProject ${SOURCES} main.cpp)
