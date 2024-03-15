@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Ships.h"
+#include <memory>
 
 class Events {
 public:

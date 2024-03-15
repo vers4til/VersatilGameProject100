@@ -49,8 +49,8 @@ void RandomEventGenerate(std::shared_ptr<Ships> SecilenGemi) {
 }
 
 std::unique_ptr<Ships> GemiSecimi() {
-    u_int32_t GemiSecimi{0};
-    volatile u_int32_t check;
+    uint32_t GemiSecimi{0};
+    volatile uint32_t check;
     Susleme();
     std::cout << "\n  VERSATIL GAMES INC. GURURLA SUNAR \n";
     Susleme();
