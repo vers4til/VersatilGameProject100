@@ -3,6 +3,7 @@
 #include "GeneralFunctions.h"
 
 void AbandonedEvent::EventStarter(std::shared_ptr<Ships> Ship) {
+    Susleme();
     std::cout << "\nTerk edilmis Gezegen Eventi basladi!\n";
     WaitBetweenCodes(3);
     OddOfPirates(Ship);

@@ -66,9 +66,12 @@ void PiratesEvent::ChoiceResults(const std::shared_ptr<Ships> &Ship) {
             WaitBetweenCodes(3);
             if (Odd(0, 1)) {
                 std::cout << "Savasi kaybettiniz! \n";
-                float AlinanHasar = DamageCalculator(Ship->GetWeaknessCo());
-                Ship->SetHealth(AlinanHasar);
-                std::cout << AlinanHasar << " hasar aldiniz.\n";
+                uint32_t AlinanHasar = DamageCalculator(Ship->GetWeaknessCo());
+                if (Ship->GetHealth() > AlinanHasar) {
+                    Ship->SetHealth(AlinanHasar);
+                    std::cout << AlinanHasar << " hasar aldiniz.\n";
+                } else
+                    Ship->SetHealth(Ship->GetHealth());
                 Susleme();
                 break;
             } else {

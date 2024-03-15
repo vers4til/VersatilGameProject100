@@ -31,7 +31,7 @@ void EventCount(const std::shared_ptr<Ships> &SecilenGemi) {
         WaitBetweenCodes(1);
         std::cout << "Event sonu guncel yakit seviyeniz: " << SecilenGemi->GetFuel() << "\n";
         WaitBetweenCodes(5);
-        if (SecilenGemi->GetFuel() == 0 || SecilenGemi->GetHealth() <= 0)
+        if (SecilenGemi->GetFuel() == 0 || SecilenGemi->GetHealth() == 0)
             break;
     }
 }
@@ -68,6 +68,7 @@ std::unique_ptr<Ships> GemiSecimi() {
         std::cout << "Seciminiz: ";
 
         std::cin >> GemiSecimi;
+
 
         switch (GemiSecimi) {
             case 1:
@@ -112,6 +113,6 @@ void PuanHesabi(const uint32_t CurrentHealthLevel, const uint32_t CurrentBalance
             CurrentHealthLevel * SaglikKatsayisi + CurrentBalance * ParaKatsayisi + CurrentFuelLevel * YakitKatsayisi;
 
     Susleme();
-    std::cout << "\n Oyun bitti, oyun sonu puaniniz: \n" << "          " << TotalPuan << "\n";
+    std::cout << "\n Oyun bitti, oyun sonu puaniniz: \n" << "               " << TotalPuan << "\n";
     Susleme();
 }

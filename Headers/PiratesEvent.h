@@ -4,7 +4,6 @@
 
 #include "DamagingEvents.h"
 #include "Ships.h"
-
 #include <iostream>
 
 class PiratesEvent : public DamagingEvents {

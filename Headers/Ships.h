@@ -2,6 +2,7 @@
 #define VERSATILGAMEPROJECT_SHIPS_H
 
 #include <iostream>
+#include <cstdint>
 
 class Ships{
 protected:
@@ -21,7 +22,7 @@ public:
     m_EscapeProbability(EscapeProbability),
     m_WeaknessCoefficient(WeaknessCoefficient){}
 
-     void SetHealth(float TakenDamage) ;
+     void SetHealth(uint32_t TakenDamage);
      void SetFuel(uint32_t FuelChange);
      void SetBalance(uint32_t BalanceChange);
     [[nodiscard]] uint32_t GetHealth() const;

@@ -7,7 +7,7 @@
 class DamagingEvents : public Events{
 protected:
     uint32_t NormalDamage;
-    [[nodiscard]] float DamageCalculator(float StrengthCoefficiency) const;
+    [[nodiscard]] uint32_t DamageCalculator(float WeaknessCoefficiency) const;
 public:
     explicit DamagingEvents(uint32_t NormalDamage) : NormalDamage(NormalDamage) {};
 

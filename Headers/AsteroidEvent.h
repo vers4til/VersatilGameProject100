@@ -4,6 +4,7 @@
 #include "DamagingEvents.h"
 #include "Ships.h"
 #include <iostream>
+
 class AsteroidEvent : public DamagingEvents{
 public:
 

@@ -1,7 +1,7 @@
 #include "Ships.h"
 
-void Ships::SetHealth(const float TakenDamage) {
-    m_CurrentHealthLevel -= static_cast<uint32_t>(TakenDamage);
+void Ships::SetHealth(const uint32_t TakenDamage) {
+    m_CurrentHealthLevel -= TakenDamage;
 }
 
 void Ships::SetFuel(const uint32_t FuelChange) {

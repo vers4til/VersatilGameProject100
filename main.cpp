@@ -1,4 +1,6 @@
 #include "GeneralFunctions.h"
+#include <memory>
+
 
 int main() {
     std::shared_ptr<Ships> SecilenGemi = GemiSecimi();
