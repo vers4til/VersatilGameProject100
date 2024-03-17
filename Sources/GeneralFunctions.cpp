@@ -24,7 +24,7 @@ void EventCount(const std::shared_ptr<Ships> &SecilenGemi) {
     int i{0};
     for (; i < EVENTCOUNTER; ++i) {
         RandomEventGenerate(SecilenGemi);
-        std::cout << "\nEvent sonu gunccel saglik seviyeniz: " << SecilenGemi->GetHealth() << "\n";
+        std::cout << "\nEvent sonu guncel saglik seviyeniz: " << SecilenGemi->GetHealth() << "\n";
         WaitBetweenCodes(1);
         std::cout << "Event sonu guncel para miktariniz: " << SecilenGemi->GetBalance() << "\n";
         WaitBetweenCodes(1);

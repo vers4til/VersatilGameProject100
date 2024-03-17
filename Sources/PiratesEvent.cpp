@@ -70,8 +70,10 @@ void PiratesEvent::ChoiceResults(const std::shared_ptr<Ships> &Ship) {
                 if (Ship->GetHealth() > AlinanHasar) {
                     Ship->SetHealth(AlinanHasar);
                     std::cout << AlinanHasar << " hasar aldiniz.\n";
-                } else
+                } else {
                     Ship->SetHealth(Ship->GetHealth());
+                    std::cout << "Sağlık seviyeniz 0'a dustu, oyun bitti.\n";
+                }
                 Susleme();
                 break;
             } else {

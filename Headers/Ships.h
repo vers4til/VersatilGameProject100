@@ -23,6 +23,7 @@ public:
     m_WeaknessCoefficient(WeaknessCoefficient){}
 
     virtual void DisplayName() = 0;
+
     virtual ~Ships() = default;
 
     inline void SetHealth(const uint32_t TakenDamage) {

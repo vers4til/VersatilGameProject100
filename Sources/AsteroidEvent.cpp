@@ -33,8 +33,10 @@ void AsteroidEvent::CalculateEscapeChance(const std::shared_ptr<Ships> &Ship) {
         if(Ship->GetHealth() > AlinacakHasar) {
             Ship->SetHealth(AlinacakHasar);
             std::cout << AlinacakHasar << " hasar aldiniz!\n";
-        } else
+        } else {
             Ship->SetHealth(Ship->GetHealth());
+            std::cout << "Sağlık seviyeniz 0'a dustu, oyun bitti.\n";
+        }
         Susleme();
     }
 }
